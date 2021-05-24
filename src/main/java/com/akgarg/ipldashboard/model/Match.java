@@ -138,4 +138,24 @@ public class Match {
     public void setUmpireTwo(String umpireTwo) {
         this.umpireTwo = umpireTwo;
     }
+
+    @Override
+    public String toString() {
+        return "Match{" +
+                "id=" + id +
+                ", city='" + city + '\'' +
+                ", date=" + date +
+                ", playerOfMatch='" + playerOfMatch + '\'' +
+                ", venue='" + venue + '\'' +
+                ", teamOne='" + teamOne + '\'' +
+                ", teamTwo='" + teamTwo + '\'' +
+                ", tossWinner='" + tossWinner + '\'' +
+                ", tossDecision='" + tossDecision + '\'' +
+                ", matchWinner='" + matchWinner + '\'' +
+                ", result='" + result + '\'' +
+                ", resultMargin='" + resultMargin + '\'' +
+                ", umpireOne='" + umpireOne + '\'' +
+                ", umpireTwo='" + umpireTwo + '\'' +
+                '}';
+    }
 }
