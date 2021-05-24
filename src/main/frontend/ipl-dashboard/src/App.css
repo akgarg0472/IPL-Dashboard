@@ -2,3 +2,17 @@
   text-align: left;
   padding: 20px;
 }
+
+.MatchDetailCard {
+  border: 2px solid green;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 10px;
+}
+
+.MatchSmallCard {
+  border: 2px solid red;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 10px;
+}
