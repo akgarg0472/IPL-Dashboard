@@ -5,6 +5,7 @@ import com.akgarg.ipldashboard.model.Team;
 import com.akgarg.ipldashboard.repository.MatchRepository;
 import com.akgarg.ipldashboard.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ import java.util.List;
  */
 @SuppressWarnings("unsued")
 @RestController
+@CrossOrigin
 public class TeamController {
 
     private final TeamRepository teamRepository;
