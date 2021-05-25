@@ -1,6 +1,6 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
-import './MatchSmallCard.scss';
+import "./MatchSmallCard.scss";
 
 export const MatchSmallCard = ({ teamName, match }) => {
   if (!match) {
@@ -19,12 +19,12 @@ export const MatchSmallCard = ({ teamName, match }) => {
       }
     >
       <div>
-        <span className="vs">vs&nbsp;</span>
-        <h1>
+        <span className="vs">vs</span>
+        <h1 className="other-team-name">
           <Link to={otherTeamRoute}>{otherTeamName}</Link>
         </h1>
       </div>
-      <div>
+      <div className="match-result">
         <p>
           {match.matchWinner} won by {match.resultMargin} {match.result}
         </p>

@@ -17,7 +17,15 @@
   }
 
   .win-loss-section {
-    justify-self: right;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .win-lose-pie-chart {
+    width: 66%;
+    height: 66%;
+    margin-left: auto;
   }
 
   .latest-match-section {
@@ -25,8 +33,17 @@
   }
 
   .recent-matches {
-    border: 2px solid white;
-    padding: 10px;
+    padding: 12px;
   }
 
+  .more-button {
+    display: flex;
+    align-items: center;
+
+    & > a {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 20px;
+    }
+  }
 }
