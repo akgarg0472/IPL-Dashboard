@@ -70,5 +70,4 @@ public class TeamController {
         }
         return sb.toString().trim();
     }
-
 }
