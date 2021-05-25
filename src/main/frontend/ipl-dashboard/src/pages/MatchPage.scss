@@ -1,15 +1,29 @@
 .MatchPage {
-    display: grid;
-    grid-template-columns: 1fr 16fr;
-    margin-top: 26px;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  margin-top: 26px;
 
-    .match-info {
-        grid-column: span 1;
-    }
+  .go-back-link {
+    text-align: right;
+    color: #fff;
+  }
 
-    .no-matches-found {
-        display: flex;
-        // align-items: center;
-        justify-content: center;
-    }
+  .go-back-link:hover {
+    color: lightgray;
+  }
+
+  .team-match-head {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .match-info {
+    grid-column: span 1;
+  }
+
+  .no-matches-found {
+    display: flex;
+    justify-content: center;
+  }
 }

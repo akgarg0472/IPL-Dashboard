@@ -1,12 +1,14 @@
 .YearSelector {
   .year-selector-list {
     list-style: none;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
 }
 
   .year-selector-list li {
       margin-bottom: 16px;
-      align-self: center;
+      text-align: right;
+      margin-right: 22px;
   }
 
   .active {
