@@ -63,7 +63,7 @@ export const TeamPage = () => {
       {team.matches.slice(1).map((match) => (
         <div
           className={
-            teamName === match.matchWinner
+            teamName.toLowerCase() === match.matchWinner.toLowerCase()
               ? "recent-matches won-card"
               : "recent-matches lost-card"
           }

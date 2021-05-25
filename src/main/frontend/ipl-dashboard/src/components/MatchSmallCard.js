@@ -12,6 +12,8 @@ export const MatchSmallCard = ({ teamName, match }) => {
   const otherTeamRoute = `/teams/${otherTeamName}`;
   const isMatchWon = teamName === match.matchWinner;
 
+  console.log(isMatchWon)
+
   return (
     <div
       className={

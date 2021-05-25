@@ -1,0 +1,15 @@
+.YearSelector {
+  .year-selector-list {
+    list-style: none;
+    align-self: center;
+}
+
+  .year-selector-list li {
+      margin-bottom: 16px;
+      align-self: center;
+  }
+
+  .active {
+    font-weight: bold;
+  }
+}

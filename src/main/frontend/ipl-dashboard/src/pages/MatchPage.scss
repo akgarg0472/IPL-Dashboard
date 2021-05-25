@@ -1,0 +1,9 @@
+.MatchPage {
+    display: grid;
+    grid-template-columns: 1fr 16fr;
+    margin-top: 26px;
+
+    .match-info {
+        grid-column: span 1;
+    }
+}

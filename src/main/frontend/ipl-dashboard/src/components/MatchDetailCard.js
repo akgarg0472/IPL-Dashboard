@@ -11,7 +11,7 @@ export const MatchDetailCard = ({ teamName, match }) => {
   const otherTeamName =
     match.teamOne === teamName ? match.teamTwo : match.teamOne;
   const otherTeamRoute = `/teams/${otherTeamName}`;
-  const isMatchWon = teamName === match.matchWinner;
+  const isMatchWon = teamName.toLowerCase() === match.matchWinner.toLowerCase();
 
   return (
     <div
@@ -21,7 +21,7 @@ export const MatchDetailCard = ({ teamName, match }) => {
     >
       <div className="latest-match-info">
         <h3>Latest Match</h3>
-        <br/>
+        <br />
         <span className="vs">vs&nbsp;</span>
         <h1>
           <Link to={otherTeamRoute}>{otherTeamName}</Link>
@@ -29,7 +29,8 @@ export const MatchDetailCard = ({ teamName, match }) => {
         <h2 className="match-date">{match.date}</h2>
         <p className="match-venue">at {match.venue}</p>
         <h3 className="match-result">
-          {match.matchWinner} won by {match.resultMargin} {match.result} {match.method}
+          {match.matchWinner} won by {match.resultMargin} {match.result}{" "}
+          {match.method}
         </h3>
       </div>
 
