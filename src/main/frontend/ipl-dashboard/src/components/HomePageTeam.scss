@@ -4,14 +4,15 @@
     border: 2px solid royalblue;
     margin: 10px 5px 5px 5px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #33b5e5;
+    background-color: #207398;
     border-radius: 16px;
 }
 
 .HomePageTeam:hover {
-    background-color: #0099CC;
+    background-color: #368cb1;
     text-decoration: none;
 }
 

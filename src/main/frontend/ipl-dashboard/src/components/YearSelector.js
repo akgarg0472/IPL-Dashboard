@@ -17,7 +17,7 @@ export const YearSelector = ({ teamName, selectedYear }) => {
         {years.map((year) => (
           <Link to={`/teams/${teamName}/matches/${year}`}>
             {parseInt(year) === parseInt(selectedYear) ? (
-              <li className="active">{year}</li>
+              <li className="active" key={`${year}`} >{year}</li>
             ) : (
               <li>{year}</li>
             )}

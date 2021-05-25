@@ -5,6 +5,11 @@
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 
+  .go-to-home-page {
+    position: absolute;
+    margin-top: -150px;
+  }
+
   .team-name-section {
     grid-column: span 3;
     justify-self: start;

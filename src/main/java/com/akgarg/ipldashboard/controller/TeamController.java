@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -54,6 +55,8 @@ public class TeamController {
         List<String> teamsList = new ArrayList<>();
         List<Team> teams = this.teamRepository.findAll();
         teams.forEach(team -> teamsList.add(team.getTeamName()));
+
+        Collections.sort(teamsList);
 
         return teamsList;
     }

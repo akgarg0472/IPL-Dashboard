@@ -3,6 +3,7 @@ import { MatchDetailCard } from "../components/MatchDetailCard";
 import { MatchSmallCard } from "../components/MatchSmallCard";
 import { Link, useParams } from "react-router-dom";
 import { PieChart } from "react-minimal-pie-chart";
+import { Route } from "react-router";
 import "./TeamPage.scss";
 
 export const TeamPage = () => {
@@ -37,6 +38,12 @@ export const TeamPage = () => {
   return (
     <div className="TeamPage">
       <div className="team-name-section">
+        <h2 className="go-to-home-page">
+          <Route>
+            <Link to="/" style={{textDecoration:'none'}}>&lt; Home</Link>
+          </Route>
+        </h2>
+
         <h1>{team.teamName}</h1>
       </div>
 
@@ -66,6 +73,7 @@ export const TeamPage = () => {
 
       {team.matches.slice(1).map((match) => (
         <div
+          key={`${match.id}`}
           className={
             teamName.toLowerCase() === match.matchWinner.toLowerCase()
               ? "recent-matches won-card"
