@@ -10,7 +10,7 @@ export const IndexPage = () => {
 
   useEffect(() => {
     const fetchTeams = async () => {
-      const response = await fetch(`http://localhost:8080/all-teams`);
+      const response = await fetch(`/all-teams`);
       const data = await response.json();
       setTeams(data);
     };

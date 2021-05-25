@@ -55,7 +55,6 @@ public class TeamController {
         List<String> teamsList = new ArrayList<>();
         List<Team> teams = this.teamRepository.findAll();
         teams.forEach(team -> teamsList.add(team.getTeamName()));
-
         Collections.sort(teamsList);
 
         return teamsList;
