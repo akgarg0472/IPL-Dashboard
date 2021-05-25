@@ -30,7 +30,7 @@ export const MatchPage = () => {
             <MatchDetailCard teamName={teamName} match={match} />
           ))
         ) : (
-          <h1>
+          <h1 className="no-matches-found">
             No matches found for {teamName} in {year}
           </h1>
         )}

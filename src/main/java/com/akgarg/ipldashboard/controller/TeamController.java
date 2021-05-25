@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -38,12 +39,23 @@ public class TeamController {
         return team;
     }
 
+
     @RequestMapping("/team/{teamName}/matches")
     public List<Match> getMatchesForTeam(@PathVariable("teamName") String teamName, @RequestParam int year) {
         LocalDate startDate = LocalDate.of(year, 1, 1);
         LocalDate endDate = LocalDate.of(year + 1, 1, 1);
         teamName = getFirstCharacterUpperCaseString(teamName);
         return this.matchRepository.getMatchesByTeamBetweenDates(teamName, startDate, endDate);
+    }
+
+
+    @RequestMapping(value = "/all-teams", method = RequestMethod.GET)
+    public List<String> getAllTeams() {
+        List<String> teamsList = new ArrayList<>();
+        List<Team> teams = this.teamRepository.findAll();
+        teams.forEach(team -> teamsList.add(team.getTeamName()));
+
+        return teamsList;
     }
 
 

@@ -6,4 +6,10 @@
     .match-info {
         grid-column: span 1;
     }
+
+    .no-matches-found {
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+    }
 }

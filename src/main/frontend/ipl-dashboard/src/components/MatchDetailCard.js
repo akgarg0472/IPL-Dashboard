@@ -2,7 +2,7 @@ import { React } from "react";
 import { Link } from "react-router-dom";
 import "./MatchDetailCard.scss";
 
-export const MatchDetailCard = ({ teamName, match }) => {
+export const MatchDetailCard = ({ teamName, match, bool }) => {
   if (!match) {
     console.log("empty match");
     return null;
@@ -20,8 +20,6 @@ export const MatchDetailCard = ({ teamName, match }) => {
       }
     >
       <div className="latest-match-info">
-        <h3>Latest Match</h3>
-        <br />
         <span className="vs">vs&nbsp;</span>
         <h1>
           <Link to={otherTeamRoute}>{otherTeamName}</Link>

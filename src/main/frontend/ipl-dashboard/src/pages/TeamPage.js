@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { MatchDetailCard } from "../components/MatchDetailCard";
 import { MatchSmallCard } from "../components/MatchSmallCard";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { PieChart } from "react-minimal-pie-chart";
 import "./TeamPage.scss";
 
@@ -32,6 +32,8 @@ export const TeamPage = () => {
     (100 / team.totalMatchesPlayed)
   ).toFixed(2);
 
+  const moreRoute = `/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`;
+
   return (
     <div className="TeamPage">
       <div className="team-name-section">
@@ -57,7 +59,9 @@ export const TeamPage = () => {
       </div>
 
       <div className="latest-match-section">
+        <h3>Latest Match</h3>
         <MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
+        <h3>Most Recent matches</h3>
       </div>
 
       {team.matches.slice(1).map((match) => (
@@ -72,7 +76,7 @@ export const TeamPage = () => {
         </div>
       ))}
       <div className="more-button">
-        <a href="#">More &gt;&gt;</a>
+        <Link to={moreRoute}>More &gt;&gt;</Link>
       </div>
     </div>
   );
