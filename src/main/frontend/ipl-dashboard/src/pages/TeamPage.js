@@ -23,6 +23,7 @@ export const TeamPage = () => {
 
   return (
     <div className="TeamPage">
+      
       <div className="team-name-section">
         <h1>{team.teamName}</h1>
       </div>
@@ -35,7 +36,7 @@ export const TeamPage = () => {
       </div>
 
       {team.matches.slice(1).map((match) => (
-        <div>
+        <div className= {teamName === match.matchWinner ? "recent-matches won-card" : "lost-card"}>
           <MatchSmallCard teamName={team.teamName} match={match} />
         </div>
       ))}

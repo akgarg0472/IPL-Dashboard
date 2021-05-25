@@ -6,20 +6,27 @@
   grid-row-gap: 10px;
 
   .team-name-section {
-      grid-column: span 3;
-      justify-self: start;
-      align-self: end;
+    grid-column: span 3;
+    justify-self: start;
+    align-self: end;
+    margin-bottom: 40px;
   }
 
   .team-name-section h1 {
-      font-size: 4rem;
+    font-size: 4rem;
   }
 
   .win-loss-section {
-      justify-self: center;
+    justify-self: right;
   }
 
   .latest-match-section {
-      grid-column: span 4;
+    grid-column: span 4;
   }
+
+  .recent-matches {
+    border: 2px solid white;
+    padding: 10px;
+  }
+
 }
