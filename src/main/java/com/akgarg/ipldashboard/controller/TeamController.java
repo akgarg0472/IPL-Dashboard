@@ -42,8 +42,6 @@ public class TeamController {
         LocalDate startDate = LocalDate.of(year, 1, 1);
         LocalDate endDate = LocalDate.of(year + 1, 1, 1);
         teamName = getFirstCharacterUpperCaseString(teamName);
-
-        //        return this.matchRepository.getByTeamOneAndDateBetweenOrTeamTwoAndDateBetweenOrderByDateDesc(teamName, startDate, endDate, teamName, startDate, endDate);
         return this.matchRepository.getMatchesByTeamBetweenDates(teamName, startDate, endDate);
     }
 

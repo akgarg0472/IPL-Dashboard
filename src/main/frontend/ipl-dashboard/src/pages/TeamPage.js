@@ -2,6 +2,7 @@ import { React, useEffect, useState } from "react";
 import { MatchDetailCard } from "../components/MatchDetailCard";
 import { MatchSmallCard } from "../components/MatchSmallCard";
 import { useParams } from "react-router-dom";
+import "./TeamPage.scss";
 
 export const TeamPage = () => {
   const [team, setTeam] = useState({ matches: [] });
@@ -14,13 +15,7 @@ export const TeamPage = () => {
       setTeam(data);
     };
     fetchMatches();
-  }, 
-  
-  
-  [teamName]
-  
-  
-  );
+  }, [teamName]);
 
   if (!team || !team.teamName) {
     return <h1>Team not found</h1>;
@@ -28,11 +23,25 @@ export const TeamPage = () => {
 
   return (
     <div className="TeamPage">
-      <h1>{team.teamName}</h1>
-      <MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
+      <div className="team-name-section">
+        <h1>{team.teamName}</h1>
+      </div>
+      <div className="win-loss-section">
+        <h2>Win vs Loss graph</h2>
+      </div>
+
+      <div className="latest-match-section">
+        <MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
+      </div>
+
       {team.matches.slice(1).map((match) => (
-        <MatchSmallCard teamName={team.teamName} match={match} />
+        <div>
+          <MatchSmallCard teamName={team.teamName} match={match} />
+        </div>
       ))}
+      <div className="MoreButton">
+        <a href="#">More&gt;</a>
+      </div>
     </div>
   );
 };
